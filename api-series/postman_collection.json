@@ -1,0 +1,62 @@
+{
+  "info": {
+    "name": "API Series",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar series",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": "http://127.0.0.1:8000/api/series"
+      }
+    },
+    {
+      "name": "Cadastrar serie",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Accept", "value": "application/json" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nome\": \"Breaking Bad\",\n    \"genero\": \"Drama\",\n    \"temporadas\": 5,\n    \"nota\": 9.5\n}"
+        },
+        "url": "http://127.0.0.1:8000/api/series"
+      }
+    },
+    {
+      "name": "Buscar serie por id",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": "http://127.0.0.1:8000/api/series/1"
+      }
+    },
+    {
+      "name": "Atualizar serie",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Accept", "value": "application/json" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nota\": 10\n}"
+        },
+        "url": "http://127.0.0.1:8000/api/series/1"
+      }
+    },
+    {
+      "name": "Excluir serie",
+      "request": {
+        "method": "DELETE",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": "http://127.0.0.1:8000/api/series/1"
+      }
+    }
+  ]
+}
